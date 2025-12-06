@@ -1,60 +1,34 @@
 # UI-UX-FINAL-PROJECT
-Final project of my class UI\UX
-ID: 202512398;
-Name: Arlan;
-Class: Computer UI/UX design;
-Project: Webpage;
-AI usage: 35%
-1. Design Concept & Philosophy
+Final Project: UI/UX Design ID: 202512398 | Name: Arlan | Class: Computer UI/UX Design Project: Webpage | AI Usage: 35%
 
-FIGURE.OS is a concept landing page for a premium anime figure retailer. The design objective was to break away from the standard "chaotic akihabara" aesthetic often found in hobby shops and instead present collectibles as high-end art pieces.
+Design Concept
+FIGURE.OS is a premium landing page for anime figures. The goal was to reject the chaotic look of typical hobby shops and present figures as high-end art. The style is "Vintage Editorial," combining modern layouts with a retro, paper-like aesthetic.
 
-The interface follows a "Vintage Editorial" aesthetic, combining modern layout techniques (Bento Grids, Glassmorphism) with a retro-inspired color palette that mimics the warmth of old manga pages or vintage print magazines.
+Color Theory ("Vintage Light")
+Instead of standard Dark Mode, I used a high-contrast warm palette:
 
-2. Visual Identity & Color Theory
+Background (#e7cfcd): "Almond Silk" – A soft beige that mimics vintage paper and reduces eye strain.
 
-Instead of the industry-standard "Dark Mode" (Black/Purple), this project utilizes a high-contrast "Vintage Light" palette to evoke sophistication and warmth.
+Text (#45050c): "Night Bordeaux" – A deep red that offers softer contrast than pure black.
 
-Primary Background (#e7cfcd - Almond Silk): A soft, beige-pink off-white that reduces eye strain compared to pure white and provides a paper-like texture feeling.
+Accent (#f85a3e): "Tomato Orange" – Used strictly for Call-to-Action buttons to guide user focus.
 
-Primary Text (#45050c - Night Bordeaux): A deep, near-black red. It offers softer contrast than pure black (#000000) while maintaining excellent readability and thematic consistency with the "red ink" aesthetic.
+Key UX Features
+Immersive Hero: A full-screen (100vh) slider with a gradient that blends the images seamlessly into the beige background.
 
-Accent Color (#f85a3e - Tomato Orange): Used sparingly for call-to-action buttons (CTAs) and badges to guide user attention immediately to conversion points.
+Glassmorphism Nav: A sticky, semi-transparent header (blur effect) that keeps navigation accessible without blocking content.
 
-Secondary Accent (#720e07 - Molten Lava): Used for hover states and subtle borders to add depth without introducing new hues.
+Bento Grid: A responsive grid layout that highlights "Hero" collections while organizing smaller items cleanly.
 
-3. UI/UX Key Features
+Micro-Interactions:
 
-A. Immersive Hero Section
+Toast Notifications: Instant visual feedback when clicking "Add to Cart."
 
-Design: Full-viewport height (100vh) image slider with a custom radial gradient overlay.
+Smooth Scroll: Horizontal scrolling for the product feed to mimic mobile swiping.
 
-UX Goal: Immediate visual impact. The gradient fades into the specific beige background color (#e7cfcd) rather than transparent black, creating a seamless blend between the image and the rest of the page content.
-
-B. Glassmorphism Navigation
-
-Design: The sticky header uses a backdrop-blur effect (blur(20px)) with a translucent red tint.
-
-UX Goal: Keeps navigation accessible at all times without visually obstructing the content underneath. The semi-transparent effect maintains context for the user as they scroll.
-
-C. Bento Grid Layout ("Curated Drops")
-
-Design: A responsive CSS Grid layout that alternates between spanning 2 rows/columns and single cells.
-
-UX Goal: Breaks the monotony of standard product lists. It allows for hierarchical storytelling—highlighting a "Hero" collection (Mecha) while showing smaller "New" items side-by-side.
-
-D. Micro-Interactions & Feedback
-
-Toast Notifications: A custom JavaScript notification system triggers on "Add to Cart" actions, providing immediate system status feedback (Heuristic #1: Visibility of system status).
-
-Hover States: All interactive elements feature a "Red Tint" hover effect (hover-red-tint), unifying the interactive language across buttons, cards, and icons.
-
-Smooth Scroll: JavaScript-controlled horizontal scrolling for the "Fresh From Japan" section mimics mobile swipe interactions on desktop.
-
-4. Technical Implementation
-
+Technical Stack
 Structure: Semantic HTML5.
 
-Styling: Tailwind CSS (via CDN) for layout utility, combined with custom CSS Variables (:root) for strict color theme management.
+Styling: Tailwind CSS (Utility-first) + Custom CSS Variables.
 
-Logic: Vanilla JavaScript (ES6) handling DOM manipulation for the slider, mobile menu toggling, and toast notifications without external framework dependencies.
+Logic: Vanilla JavaScript (ES6) for the slider, menu, and notifications (No heavy frameworks).
