@@ -5,11 +5,11 @@ const slides = document.querySelectorAll('.slide');
 const indicatorsContainer = document.getElementById('indicators');
 let currentSlide = 0;
 
-// Create indicators
+// Created indicators
 if (indicatorsContainer) {
     slides.forEach((_, idx) => {
         const dot = document.createElement('button');
-        // Updated colors: Tomato for active, Almond/30 for inactive
+        
         dot.className = `h-1 rounded-full transition-all ${idx === 0 ? 'w-12 bg-tomato' : 'w-8 bg-almond/30'}`;
         dot.onclick = () => goToSlide(idx);
         indicatorsContainer.appendChild(dot);
@@ -21,13 +21,13 @@ const dots = indicatorsContainer ? indicatorsContainer.querySelectorAll('button'
 function updateSlider() {
     slides.forEach((slide, idx) => {
         slide.classList.remove('active');
-        // Reset dots to Almond
+       
         if(dots[idx]) dots[idx].className = 'h-1 rounded-full transition-all w-8 bg-almond/30';
     });
 
     if (slides[currentSlide]) {
         slides[currentSlide].classList.add('active');
-        // Set active dot to Tomato
+        
         if(dots[currentSlide]) dots[currentSlide].className = 'h-1 rounded-full transition-all w-12 bg-tomato';
     }
 }
@@ -96,7 +96,7 @@ function showToast(message) {
     }
 
     const toast = document.createElement('div');
-    // Updated border color to Lava/30
+    
     toast.className = 'toast glass flex items-center gap-3 px-6 py-4 rounded-lg border border-lava/30 text-ghost min-w-[300px] shadow-2xl';
     toast.innerHTML = `
         <div class="bg-tomato rounded-full p-1"><i data-lucide="check" class="w-4 h-4 text-night"></i></div>
@@ -148,4 +148,5 @@ if (searchToggle && searchBar) {
             searchInput.focus();
         }
     });
+
 }
