@@ -4,6 +4,7 @@ ID: 202512398;
 Name: Arlan;
 Class: Computer UI/UX design;
 Project: Webpage;
+AI usage: 35%
 1. Design Concept & Philosophy
 
 FIGURE.OS is a concept landing page for a premium anime figure retailer. The design objective was to break away from the standard "chaotic akihabara" aesthetic often found in hobby shops and instead present collectibles as high-end art pieces.
