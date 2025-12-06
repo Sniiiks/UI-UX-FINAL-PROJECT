@@ -1,0 +1,121 @@
+:root {
+    --dark-red: #8e3845;   /* Was night-bordeaux */
+    --red: #720e07;        /* Was molten-lava */
+    --orange: #f85a3e;     /* Was tomato */
+    --beige: #e7cfcd;      /* Was almond-silk */
+    --white: #f7f7ff;      /* Was ghost-white */
+}
+
+/* --- GLOBAL STYLES --- */
+body {
+    font-family: 'Syne', sans-serif;
+    /* Light Background (Beige), Dark Text (Dark Red) */
+    background-color: var(--beige);
+    color: var(--dark-red); 
+    overflow-x: hidden;
+}
+
+/* Glassmorphism Effect */
+.glass {
+    /* Red tint for the glass */
+    background: rgba(114, 14, 7, 0.1); 
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    /* Darker border for visibility */
+    border-bottom: 1px solid rgba(69, 5, 12, 0.1);
+}
+
+/* Scrollbar Hiding */
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;
+}
+.scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+/* Slider Animations */
+.slide {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    pointer-events: none;
+}
+.slide.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+.slide.active h1 { animation: slideUp 1s ease-out forwards; }
+.slide.active p { animation: slideUp 1s ease-out 0.2s forwards; opacity: 0; }
+.slide.active .buttons { animation: slideUp 1s ease-out 0.4s forwards; opacity: 0; }
+
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Marquee Animation */
+@keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+.animate-marquee {
+    animation: marquee 20s linear infinite;
+}
+
+/* Toast Notifications */
+@keyframes slideInRight {
+    from { transform: translateX(100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+.toast {
+    animation: slideInRight 0.3s ease-out forwards;
+}
+.toast.hiding {
+    animation: fadeOut 0.3s ease-out forwards;
+}
+
+/* --- SIMPLIFIED CLASSES --- */
+/* YOU MUST UPDATE YOUR HTML TO USE THESE NEW CLASS NAMES */
+
+/* 1. Solid Backgrounds (Buttons/Badges) */
+/* Old: bg-indigo-600 */
+.bg-orange { 
+    background-color: var(--orange) !important; 
+}
+
+/* 2. Text Icons */
+/* Old: text-indigo-500 */
+.text-orange,
+.group:hover .group-hover\:text-orange { 
+    color: var(--orange) !important; 
+}
+
+/* 3. Borders (Underlines) */
+/* Old: border-indigo-600 */
+.border-orange {
+    border-color: var(--orange) !important;
+}
+
+/* 4. Hover Effects (Icon Buttons) */
+/* Old: hover:bg-indigo-600/20 */
+.hover-red-tint:hover {
+    background-color: rgba(114, 14, 7, 0.1) !important; 
+    border-color: var(--red) !important;
+}
+
+/* 5. Text Colors (For Light Mode) */
+/* Old: text-ghost */
+.text-dark-red {
+    color: var(--dark-red) !important;
+}
+
+/* Old: text-almond */
+.text-red {
+    color: var(--red) !important;
+}
