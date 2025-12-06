@@ -1,27 +1,28 @@
+/* --- GLOBAL VARIABLES (THE SOURCE OF TRUTH) --- */
 :root {
-    --dark-red: #8e3845;   /* Was night-bordeaux */
-    --red: #720e07;        /* Was molten-lava */
-    --orange: #f85a3e;     /* Was tomato */
-    --beige: #e7cfcd;      /* Was almond-silk */
-    --white: #f7f7ff;      /* Was ghost-white */
+    --night-bordeaux: #45050c;
+    --molten-lava: #720e07;
+    --tomato: #f85a3e;
+    --almond-silk: #e7cfcd;
+    --ghost-white: #f7f7ff;
 }
 
 /* --- GLOBAL STYLES --- */
 body {
     font-family: 'Syne', sans-serif;
-    /* Light Background (Beige), Dark Text (Dark Red) */
-    background-color: var(--beige);
-    color: var(--dark-red); 
+
+    background-color: var(--almond-silk);
+    color: var(--night-bordeaux); 
     overflow-x: hidden;
 }
 
 /* Glassmorphism Effect */
 .glass {
-    /* Red tint for the glass */
+    /* Kept the red tint, but it will look like a tea-stain on the light BG. */
     background: rgba(114, 14, 7, 0.1); 
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
-    /* Darker border for visibility */
+
     border-bottom: 1px solid rgba(69, 5, 12, 0.1);
 }
 
@@ -81,41 +82,30 @@ body {
 }
 
 
-
-/* 1. Solid Backgrounds (Buttons/Badges) */
-/* Old: bg-indigo-600 */
-.bg-orange { 
-    background-color: var(--orange) !important; 
+.bg-indigo-600 { 
+    background-color: var(--tomato) !important; 
 }
 
-/* 2. Text Icons */
-/* Old: text-indigo-500 */
-.text-orange,
-.group:hover .group-hover\:text-orange { 
-    color: var(--orange) !important; 
+.text-indigo-500,
+.group:hover .group-hover\:text-indigo-500 { 
+    color: var(--tomato) !important; 
 }
 
-/* 3. Borders (Underlines) */
-/* Old: border-indigo-600 */
-.border-orange {
-    border-color: var(--orange) !important;
+.border-indigo-600 {
+    border-color: var(--tomato) !important;
 }
 
-/* 4. Hover Effects (Icon Buttons) */
-/* Old: hover:bg-indigo-600/20 */
-.hover-red-tint:hover {
+.hover\:bg-indigo-600\/20:hover {
     background-color: rgba(114, 14, 7, 0.1) !important; 
-    border-color: var(--red) !important;
+    border-color: var(--molten-lava) !important;
 }
 
-/* 5. Text Colors (For Light Mode) */
-/* Old: text-ghost */
-.text-dark-red {
-    color: var(--dark-red) !important;
+
+
+.text-ghost {
+    color: var(--night-bordeaux) !important;
 }
 
-/* Old: text-almond */
-.text-red {
-    color: var(--red) !important;
-
+.text-almond {
+    color: var(--molten-lava) !important;
 }
