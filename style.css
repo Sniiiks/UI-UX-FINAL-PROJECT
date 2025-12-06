@@ -80,8 +80,7 @@ body {
     animation: fadeOut 0.3s ease-out forwards;
 }
 
-/* --- SIMPLIFIED CLASSES --- */
-/* YOU MUST UPDATE YOUR HTML TO USE THESE NEW CLASS NAMES */
+
 
 /* 1. Solid Backgrounds (Buttons/Badges) */
 /* Old: bg-indigo-600 */
@@ -118,4 +117,5 @@ body {
 /* Old: text-almond */
 .text-red {
     color: var(--red) !important;
+
 }
